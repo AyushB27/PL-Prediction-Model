@@ -144,6 +144,37 @@ MOST LIKELY SCORELINES:
 =================================================================
 ```
 
+### 5. Generate the 2025–2026 Premier League Table
+Compute the full Expected Points (xPts) table and compare actual standings against model expectations:
+```bash
+python scripts/compute_table.py
+```
+
+Output:
+```text
+==========================================================================================
+STANDINGS COMPARISON: ACTUAL vs. MODEL EXPECTATION (xPts)
+==========================================================================================
+               Team  Act_Pos  Exp_Pos Pos_Diff  Act_Pts Exp_Pts Pts_Diff
+Pos                                                                     
+1           Arsenal        1        1        =       85    76.8     +8.2
+2          Man City        2        2        =       78    76.8     +1.2
+3        Man United        3        7       +4       71    56.1    +14.9
+4       Aston Villa        4        5       +1       65    59.4     +5.6
+5         Liverpool        5        3       -2       60    70.4    -10.4
+...
+19          Burnley       19       20       +1       22    28.8     -6.8
+20           Wolves       20       18       -2       20    35.4    -15.4
+==========================================================================================
+
+MODEL INSIGHTS:
+  • Champion:            Arsenal (Predicted 1st: Arsenal)
+  • UCL Qualifiers:      Arsenal, Man City, Man United, Aston Villa
+  • Relegated (Bottom 3):West Ham, Burnley, Wolves
+  • Top Overperformer:   Sunderland (+19.3 pts above expected)
+  • Top Underperformer:  Wolves (-15.4 pts below expected)
+```
+
 ---
 
 ## 📁 Repository Structure
@@ -161,10 +192,12 @@ PL-Prediction-Model/
 │   │   └── final_model_data.csv             # Leakage-safe, shifted feature dataset
 │   └── outputs/
 │       ├── ablation_experiment_results.csv  # Full 4-Tier x 5-Model metric benchmark
-│       └── model_predictions.csv            # 2025-2026 holdout predictions
+│       ├── model_predictions.csv            # 2025-2026 holdout predictions
+│       └── league_table_2025_26.csv         # Standings comparison (Actual vs Expected)
 └── scripts/
     ├── build_historical_data.py             # Harmonizes raw archives with Understat xG
     ├── data.py                              # Computes rolling form, Elo, and fatigue
     ├── run_experiments.py                   # Main experiment & ablation pipeline
-    └── predict_fixture.py                   # Interactive fixture prediction CLI
+    ├── predict_fixture.py                   # Interactive fixture prediction CLI
+    └── compute_table.py                     # Generates 2025-26 standings & xPts table
 ```
