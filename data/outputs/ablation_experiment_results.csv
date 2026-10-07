@@ -1,0 +1,22 @@
+Model,Feature Tier,Num Features,CV Log Loss,CV Brier Score,CV Accuracy (%),CV Draw Recall (%),Holdout Log Loss,Holdout Brier,Holdout Accuracy (%),Holdout Draw Recall (%)
+Dixon-Coles,Tier 2: + Elo Quality,15,0.9641,0.5725,55.0,0.0,1.0319,0.6203,48.16,0.0
+Dixon-Coles,Tier 3: + Expected Goals,27,0.9596,0.5696,55.39,0.0,1.0335,0.6214,47.11,0.0
+Poisson GLM,Tier 2: + Elo Quality,15,0.9634,0.572,55.0,0.0,1.0347,0.6222,48.16,0.0
+Poisson GLM,Tier 3: + Expected Goals,27,0.9593,0.5693,55.39,0.0,1.0366,0.6234,47.11,0.0
+Dixon-Coles,Tier 4: + Scheduling Context,33,0.9619,0.5709,55.59,0.0,1.0376,0.6228,46.84,0.0
+Poisson GLM,Tier 4: + Scheduling Context,33,0.9616,0.5706,55.59,0.0,1.0407,0.6248,46.84,0.0
+Logistic Regression,Tier 2: + Elo Quality,15,0.99,0.5897,52.04,16.0,1.0479,0.6297,45.53,15.38
+Dixon-Coles,Tier 1: Basic Form,10,0.9985,0.5961,53.03,0.0,1.0486,0.6319,47.63,0.0
+Logistic Regression,Tier 4: + Scheduling Context,33,0.9902,0.5891,52.24,14.57,1.0493,0.6315,44.74,11.54
+Poisson GLM,Tier 1: Basic Form,10,0.9965,0.595,53.03,0.0,1.0505,0.6331,47.63,0.0
+Random Forest,Tier 2: + Elo Quality,15,0.9882,0.5877,51.97,16.29,1.0529,0.6352,46.58,11.54
+Logistic Regression,Tier 3: + Expected Goals,27,0.9864,0.5865,52.5,15.14,1.0534,0.6334,44.47,12.5
+Random Forest,Tier 4: + Scheduling Context,33,0.9795,0.5824,53.68,12.29,1.0575,0.6373,44.47,4.81
+Random Forest,Tier 3: + Expected Goals,27,0.9789,0.5817,53.36,13.43,1.0583,0.6379,46.58,8.65
+Logistic Regression,Tier 1: Basic Form,10,1.0313,0.6185,47.7,20.29,1.0684,0.6452,41.05,21.15
+Random Forest,Tier 1: Basic Form,10,1.0314,0.6187,47.76,14.29,1.0782,0.6526,43.95,17.31
+Empirical Baseline,Tier 0 (Historical Prior),0,,,,,1.0835,0.6557,42.63,0.0
+HistGradientBoosting,Tier 4: + Scheduling Context,33,1.0424,0.6171,49.61,21.14,1.1142,0.6699,42.63,14.42
+HistGradientBoosting,Tier 2: + Elo Quality,15,1.0514,0.6226,48.75,21.71,1.1151,0.67,44.47,22.12
+HistGradientBoosting,Tier 1: Basic Form,10,1.0942,0.6527,44.28,23.14,1.1157,0.6752,39.21,24.04
+HistGradientBoosting,Tier 3: + Expected Goals,27,1.0433,0.6176,49.54,20.86,1.1236,0.6769,42.89,17.31
